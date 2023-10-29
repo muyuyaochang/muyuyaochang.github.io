@@ -9,7 +9,7 @@ banner_img: /img/夏日海边02.jpg
 
 
 
-前段时间因为学习ROS,安装了Windows10+Ubuntu Desktop双系统，在一段时间的使用后感觉个人更喜欢Ubuntu的开发环境，遂生出将Hexo博客工作流同步到Ubuntu上的想法。经过资料搜索后，Fangzh的一篇博文介绍了一种基于git多分支控制的博客工作流多端同步的方法。
+​	前段时间因为学习ROS,安装了Windows10+Ubuntu Desktop双系统，在一段时间的使用后感觉个人更喜欢Ubuntu的开发环境，遂生出将Hexo博客工作流同步到Ubuntu上的想法。经过资料搜索后，Fangzh的一篇博文介绍了一种基于git多分支控制的博客工作流多端同步的方法。
 
 {% note info%}
 
@@ -18,7 +18,9 @@ banner_img: /img/夏日海边02.jpg
 
 ## 方案介绍
 
-在我们每次通过`hexo g`命令将本地源文件编译生成静态资源文件（也就是网页文件）之后，我们还需要通过`hexo d`命令将静态资源文件（隐藏文件夹`.deploy_git`内）部署到之前教程中配置的远程地址进行托管（在本教程中为github仓库中的`master`分支）。
+在我们每次通过`hexo g`命令将本地源文件编译生成`静态资源文件`（也就是网页文件）之后，我们还需要通过`hexo d`命令将`静态资源文件`（文件夹`.deploy_git`内）部署到之前教程中配置的远程地址进行托管（在本教程中为github仓库中的`master`分支）。
+
+![](../img/deploy文件夹.png)
 
 但是除了`.deploy_git`文件夹，如我们保存博客文章和图片的source文件夹、配置文件、主题等，都未同步到github远程仓库中。若将所以文件同步到主分支中，会干扰默认设置的`github action`自动部署到`github page`。
 
@@ -30,9 +32,13 @@ banner_img: /img/夏日海边02.jpg
 
 - `master`分支，每次更新博客时输入`hexo d`，自动将生成的网页文件（隐藏文件夹`.deploy_git`内）进行同步到github仓库的master分支，进行`github action`通过`github page`自动部署。也就是我们在网页访问博客所看到的网页内容。
 
+![](../img/master分支.png)
+
 
 
 - `hexo`分支，需要hexo工作流同步时自己手动同步到github仓库的hexo分支，每次基于其所同步的hexo工程源文件进行`hexo g`编译生成和`hexo d`部署。
+
+![](../img/hexo分支.png)
 
 
 
@@ -41,6 +47,8 @@ banner_img: /img/夏日海边02.jpg
 ### Step 1 github仓库分支设置
 
 > 设置新分支`hexo`，并将其设置为默认分支（方便每次手动同步工程源文件，用于部署的`.deploy_git`文件夹会在`hexo d`后自动部署到github远程仓库的master分支中，我们在一开始建站时的配置文件中配置了）
+
+![](../img/hexo分支设置.png)
 
 ### Step 2 将工程源文件上传到hexo分支中
 
