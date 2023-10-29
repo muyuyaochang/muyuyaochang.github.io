@@ -1,7 +1,7 @@
 ---
-title: Clash for Windows使用教程
+title: 魔法容器CFW使用教程
 date: 2023-07-08 18:39:42
-excerpt: Clash for Windows使用教程
+excerpt: 魔法容器小猫咪Clash for Windows使用教程
 tags: 常用工具
 index_img: /img/ClashforWindows.jpg
 banner_img: /img/夏日海边02.jpg
