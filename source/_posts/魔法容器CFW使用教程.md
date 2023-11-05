@@ -96,3 +96,4 @@ openai账号使用谷歌邮箱注册，后续需要手机号验证（中国手�
 
 [^1]: [Clash for Windows 官网地址 - Clash for Windows](https://clashforwindows.org/clash-for-windows-official/)
 [^2]: [性价比机场 (xingjiabijichang.com)](https://1.xingjiabijichang.com/#/login)
+[^3]: [can](https://hiif.ong/clash/)
